@@ -4,8 +4,7 @@ import Main from '../Pages/Main';
 
 describe('<Main />', () => {
 	it('renders Main component', () => {
-		const { getByText, getByTestId } = render(<Main />);
-		getByText('Hello');
+		const { getByTestId } = render(<Main />);
 		getByTestId('MainContainer');
 	});
 });

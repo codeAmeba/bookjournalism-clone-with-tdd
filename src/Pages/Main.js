@@ -1,8 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import Header from '../Components/Header';
 
 const Main = () => {
-	return <MainContainer data-testid='MainContainer'>Hello</MainContainer>;
+	return (
+		<MainContainer data-testid='MainContainer'>
+			<Header />
+		</MainContainer>
+	);
 };
 
 const MainContainer = styled.main`
