@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import Header from '../Components/Header';
+import Menu from '../Components/Menu';
 
 const Main = () => {
+	const [ menuOpen, setMenuOpen ] = useState(false);
+
+	const handleClick = () => {
+		setMenuOpen(!menuOpen);
+	};
+
 	return (
 		<React.Fragment>
 			<GlobalStyle />
 			<MainContainer data-testid='MainContainer'>
-				<Header />
+				{menuOpen ? <Menu handleClick={handleClick} /> : ''}
+				<Header handleClick={handleClick} />
 			</MainContainer>
 		</React.Fragment>
 	);
