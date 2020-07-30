@@ -1,12 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { AiOutlineUser, AiOutlineSearch, AiOutlineMenu } from 'react-icons/ai';
+import logo from '../Images/logo.png';
 
-const Header = ({ onToggle, scrollPosition }) => {
+const Header = ({ onToggle, scrollEvent }) => {
 	return (
-		<HeaderContainer scrollPosition={scrollPosition === 0} data-testid='Header'>
+		<HeaderContainer scrollEvent={scrollEvent === 0} data-testid='Header'>
 			<AiOutlineMenu className='menuIcon' onClick={onToggle} data-testid='menuIcon' />
-			<h1>BOOK JOURNALISM</h1>
+			<h1>
+				<a href='/'>
+					<img src={logo} alt='book journalism' />
+				</a>
+			</h1>
 			<div>
 				<AiOutlineSearch className='searchIcon' data-testid='searchIcon' />
 				<AiOutlineUser className='userIcon' data-testid='userIcon' />
@@ -26,14 +31,18 @@ const HeaderContainer = styled.header`
 	justify-content: space-between;
 	align-items: center;
 	font-size: 24px;
-	border-bottom: ${props => (props.scrollPosition ? 'none' : '1px solid rgba(0, 0, 0, 1)')};
+	z-index: 10;
+	border-bottom: ${props => (props.scrollEvent ? 'none' : '1px solid rgba(0, 0, 0, 1)')};
 
 	h1 {
-		font-size: 18px;
-		font-weight: 500;
-		letter-spacing: 3px;
-		cursor: pointer;
-		font-family: Times;
+		a {
+			display: flex;
+		}
+
+		img {
+			width: 205px;
+			height: auto;
+		}
 	}
 
 	.menuIcon {

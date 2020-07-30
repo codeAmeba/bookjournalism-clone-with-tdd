@@ -7,23 +7,19 @@ import Footer from '../Components/Footer';
 
 const Main = () => {
 	const [ menuOpen, setMenuOpen ] = useState(false);
-	const [ scrollPosition, setScrollPosition ] = useState(0);
+	const [ scrollEvent, setScrollEvent ] = useState(0);
 	const [ submitEmail, setSubmitEmail ] = useState([]);
 
 	const onToggle = () => {
 		setMenuOpen(!menuOpen);
 	};
 
-	const getScrollPosition = () => {
-		setScrollPosition(window.scrollY);
-	};
-
 	return (
 		<React.Fragment>
 			<GlobalStyle />
-			<MainContainer onWheel={getScrollPosition} data-testid='MainContainer'>
+			<MainContainer onWheel={() => setScrollEvent(window.scrollY)} data-testid='MainContainer'>
 				{menuOpen ? <Menu onToggle={onToggle} /> : ''}
-				<Header scrollPosition={scrollPosition} onToggle={onToggle} />
+				<Header scrollEvent={scrollEvent} onToggle={onToggle} />
 				<Article />
 				<Footer />
 			</MainContainer>

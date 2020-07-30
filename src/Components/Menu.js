@@ -41,7 +41,7 @@ const MenuContainer = styled.section`
 	width: 310px;
 	height: 100vh;
 	position: fixed;
-	z-index: 10;
+	z-index: 20;
 	background-color: #fff;
 	border-right: 1px solid rgba(0, 0, 0, 1);
 	animation: ${MenuSlideAnimation} .3s ease-in-out;
