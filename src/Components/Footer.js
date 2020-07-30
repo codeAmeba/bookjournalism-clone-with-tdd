@@ -26,7 +26,7 @@ const FooterContainer = styled.footer`
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
-	padding: 30px;
+	padding: 40px 30px;
 
 	div {
 		display: flex;
@@ -41,27 +41,37 @@ const FooterContainer = styled.footer`
 		span {
 			margin-left: 7px;
 			font-size: 18px;
+			font-family: serif;
+			font-weight: bold;
+			letter-spacing: 1px;
 		}
 	}
 
 	form {
 		position: relative;
-		font-size: 19px;
+		font-size: 18px;
 		font-weight: 200;
-		letter-spacing: 1px;
 
-		input {
-			width: 260px;
-			height: 35px;
-			border: none;
-			border-bottom: 1px solid rgba(0, 0, 0, 1);
-			margin-left: 15px;
-			font-size: 20px;
-			outline: none;
+		label {
+			font-family: serif;
+			letter-spacing: 0.5px;
 
-			&::placeholder {
-				font-size: 15px;
-				color: rgba(0, 0, 0, 0.3);
+			input {
+				width: 260px;
+				height: 35px;
+				border: none;
+				border-bottom: 1px solid rgba(0, 0, 0, 1);
+				margin-left: 15px;
+				font-size: 20px;
+				outline: none;
+
+				&::placeholder {
+					font-size: 15px;
+					color: rgba(0, 0, 0, 0.2);
+					font-family: serif;
+					font-weight: 600;
+					letter-spacing: 2px;
+				}
 			}
 		}
 

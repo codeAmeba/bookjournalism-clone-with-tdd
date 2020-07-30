@@ -55,18 +55,21 @@ const MenuContainer = styled.section`
 	}
 
 	h4 {
-		font-size: 16px;
+		font-size: 16.5px;
 		margin-left: 30px;
 		margin-top: 30px;
 		cursor: pointer;
+		font-family: serif;
 	}
 
 	div {
 		max-height: 25vh;
 		border-top: 1px solid rgba(0, 0, 0, 1);
+		font-family: serif;
 
 		ul {
-			font-size: 13px;
+			font-size: 13.5px;
+			font-weight: 400;
 			position: relative;
 			right: 10px;
 			display: flex;
