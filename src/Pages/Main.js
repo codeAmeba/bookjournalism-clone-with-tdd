@@ -2,20 +2,29 @@ import React, { useState } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import Header from '../Components/Header';
 import Menu from '../Components/Menu';
+import Article from '../Components/Article';
+import Footer from '../Components/Footer';
 
 const Main = () => {
 	const [ menuOpen, setMenuOpen ] = useState(false);
+	const [ scrollPosition, setScrollPosition ] = useState(0);
 
-	const handleClick = () => {
+	const onToggle = () => {
 		setMenuOpen(!menuOpen);
+	};
+
+	const getScrollPosition = () => {
+		setScrollPosition(window.scrollY);
 	};
 
 	return (
 		<React.Fragment>
 			<GlobalStyle />
-			<MainContainer data-testid='MainContainer'>
-				{menuOpen ? <Menu handleClick={handleClick} /> : ''}
-				<Header handleClick={handleClick} />
+			<MainContainer onWheel={getScrollPosition} data-testid='MainContainer'>
+				{menuOpen ? <Menu onToggle={onToggle} /> : ''}
+				<Header scrollPosition={scrollPosition} onToggle={onToggle} />
+				<Article />
+				<Footer />
 			</MainContainer>
 		</React.Fragment>
 	);

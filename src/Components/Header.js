@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import { AiOutlineUser, AiOutlineSearch } from 'react-icons/ai';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { AiOutlineUser, AiOutlineSearch, AiOutlineMenu } from 'react-icons/ai';
 
-const Header = ({ handleClick }) => {
+const Header = ({ onToggle, scrollPosition }) => {
 	return (
-		<HeaderContainer>
-			<GiHamburgerMenu className='menuIcon' onClick={handleClick} data-testid='menuIcon' />
+		<HeaderContainer scrollPosition={scrollPosition === 0} data-testid='Header'>
+			<AiOutlineMenu className='menuIcon' onClick={onToggle} data-testid='menuIcon' />
 			<h1>BOOKJOURNALISM</h1>
 			<div>
 				<AiOutlineSearch className='searchIcon' data-testid='searchIcon' />
@@ -27,6 +26,7 @@ const HeaderContainer = styled.header`
 	justify-content: space-between;
 	align-items: center;
 	font-size: 24px;
+	border-bottom: ${props => (props.scrollPosition ? 'none' : '1px solid rgba(0, 0, 0, 1)')};
 
 	h1 {
 		font-size: 18px;
