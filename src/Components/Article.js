@@ -6,8 +6,8 @@ const Article = () => {
 };
 
 const ArticleContainer = styled.article`
-	height: 300vh;
-	background-color: pink;
+	height: 100vh;
+	background-color: #fff;
 `;
 
 export default Article;

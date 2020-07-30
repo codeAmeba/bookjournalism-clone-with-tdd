@@ -8,6 +8,7 @@ import Footer from '../Components/Footer';
 const Main = () => {
 	const [ menuOpen, setMenuOpen ] = useState(false);
 	const [ scrollPosition, setScrollPosition ] = useState(0);
+	const [ submitEmail, setSubmitEmail ] = useState([]);
 
 	const onToggle = () => {
 		setMenuOpen(!menuOpen);
