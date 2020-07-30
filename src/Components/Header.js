@@ -6,7 +6,7 @@ const Header = ({ onToggle, scrollPosition }) => {
 	return (
 		<HeaderContainer scrollPosition={scrollPosition === 0} data-testid='Header'>
 			<AiOutlineMenu className='menuIcon' onClick={onToggle} data-testid='menuIcon' />
-			<h1>BOOKJOURNALISM</h1>
+			<h1>BOOK JOURNALISM</h1>
 			<div>
 				<AiOutlineSearch className='searchIcon' data-testid='searchIcon' />
 				<AiOutlineUser className='userIcon' data-testid='userIcon' />
@@ -17,7 +17,7 @@ const Header = ({ onToggle, scrollPosition }) => {
 
 const HeaderContainer = styled.header`
 	width: 100%;
-	height: 10%;
+	height: 60px;
 	background-color: #fff;
 	position: fixed;
 	top: 0;
@@ -33,7 +33,7 @@ const HeaderContainer = styled.header`
 		font-weight: 500;
 		letter-spacing: 3px;
 		cursor: pointer;
-		font-family: Verdana;
+		font-family: Times;
 	}
 
 	.menuIcon {

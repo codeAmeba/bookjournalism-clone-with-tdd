@@ -6,7 +6,7 @@ import Header from '../Components/Header';
 describe('<Header />', () => {
 	it('Header is rendered', () => {
 		const { getByText } = render(<Header />);
-		expect(getByText('BOOKJOURNALISM')).toBeInTheDocument();
+		expect(getByText('BOOK JOURNALISM')).toBeInTheDocument();
 	});
 
 	it('has user and menu icons', () => {
