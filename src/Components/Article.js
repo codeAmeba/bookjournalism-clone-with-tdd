@@ -17,6 +17,8 @@ const Article = () => {
 				</div>
 			</section>
 			<section className='subArticle' data-testid='subArticle'>
+				<h3>지금 읽어야 할</h3>
+
 				<div className='itemsContainer'>
 					{subArticleItems.map((item, idx) => (
 						<div key={item.title + idx}>
@@ -51,7 +53,6 @@ const ArticleContainer = styled.article`
 		div:first-child {
 			max-width: 660px;
 			max-height: 660px;
-			margin-left: 10px;
 
 			img {
 				width: 100%;
@@ -62,7 +63,7 @@ const ArticleContainer = styled.article`
 		}
 		div:last-child {
 			max-width: 50%;
-			padding: 20px 0 20px 0;
+			padding: 20px 0;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -96,10 +97,13 @@ const ArticleContainer = styled.article`
 
 	.subArticle {
 		width: 90%;
-		height: 400px;
-		margin-top: 5%;
+		height: 500px;
 		overflow: hidden;
 		cursor: pointer;
+
+		h3 {
+			margin-top: 50px;
+		}
 
 		.itemsContainer {
 			display: flex;
@@ -107,6 +111,7 @@ const ArticleContainer = styled.article`
 			height: 100%;
 			overflow: auto;
 			padding-bottom: 15px;
+			border-top: 1px solid rgba(0, 0, 0, 1);
 
 			div {
 				display: flex;
