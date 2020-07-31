@@ -18,12 +18,11 @@ const Article = () => {
 			</section>
 			<section className='subArticle' data-testid='subArticle'>
 				<h3>지금 읽어야 할</h3>
-
 				<div className='itemsContainer'>
 					{subArticleItems.map((item, idx) => (
 						<div key={item.title + idx}>
 							<img src={item.img} alt={item.title} />
-							<h3>{item.title}</h3>
+							<h4>{item.title}</h4>
 						</div>
 					))}
 				</div>
@@ -128,6 +127,10 @@ const ArticleContainer = styled.article`
 					object-fit: cover;
 					margin: 0 10px;
 					transition: 0.3s ease-in-out;
+				}
+
+				h4 {
+					font-size: 16px;
 				}
 
 				&:hover {
