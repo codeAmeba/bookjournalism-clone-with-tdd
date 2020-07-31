@@ -45,6 +45,7 @@ const ArticleContainer = styled.article`
 	.mainArticle {
 		height: 70%;
 		width: 90%;
+		margin-bottom: 50px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -110,7 +111,7 @@ const ArticleContainer = styled.article`
 			width: 100%;
 			height: 100%;
 			overflow: auto;
-			padding-bottom: 15px;
+			padding-bottom: 20px;
 			border-top: 1px solid rgba(0, 0, 0, 1);
 
 			div {
