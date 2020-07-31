@@ -1,12 +1,12 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { GrClose } from 'react-icons/gr';
+import { AiOutlineClose } from 'react-icons/ai';
 import { menuItems } from '../config';
 
 const Menu = ({ menuOpenToggle }) => {
 	return (
 		<MenuContainer data-testid='Menu'>
-			<GrClose className='closeIcon' data-testid='closeIcon' onClick={menuOpenToggle} />
+			<AiOutlineClose className='closeIcon' data-testid='closeIcon' onClick={menuOpenToggle} />
 			<h4>북저널리즘</h4>
 
 			<div>
@@ -48,11 +48,15 @@ const MenuContainer = styled.section`
 	overflow: auto;
 
 	.closeIcon {
-		font-size: 20px;
+		font-size: 25px;
 		margin-left: 30px;
 		margin-top: 20px;
 		cursor: pointer;
 		transition: 0.3s ease-in-out;
+
+		&:hover {
+			color: #0166ff;
+		}
 	}
 
 	h4 {
@@ -61,6 +65,9 @@ const MenuContainer = styled.section`
 		margin-top: 30px;
 		cursor: pointer;
 		font-family: serif;
+		&:hover {
+			color: #0166ff;
+		}
 	}
 
 	div {
@@ -81,6 +88,9 @@ const MenuContainer = styled.section`
 				margin-bottom: 20px;
 				width: 50%;
 				cursor: pointer;
+				&:hover {
+					color: #0166ff;
+				}
 			}
 		}
 	}

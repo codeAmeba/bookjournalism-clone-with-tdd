@@ -1,12 +1,11 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { GrClose } from 'react-icons/gr';
-import { AiOutlineSearch } from 'react-icons/ai';
+import { AiOutlineSearch, AiOutlineClose } from 'react-icons/ai';
 
 const Search = ({ searchOpenToggle }) => {
 	return (
 		<SearchContainer data-testid='Search'>
-			<GrClose className='closeIcon' data-testid='closeIcon' onClick={searchOpenToggle} />
+			<AiOutlineClose className='closeIcon' data-testid='closeIcon' onClick={searchOpenToggle} />
 			<div>
 				<AiOutlineSearch className='searchIcon' onClick={searchOpenToggle} data-testid='searchIcon' />
 				<input type='text' autoFocus={true} />
@@ -28,7 +27,7 @@ const SearchSlideAnimation = keyframes`
 
 const SearchSlideAnimationMobile = keyframes`
 	0% {
-		right: -400px;
+		right: -100vw;
 		opacity: 0;
 	}
 	100% {
@@ -51,12 +50,17 @@ const SearchContainer = styled.section`
 	align-items: center;
 
 	.closeIcon {
-		font-size: 20px;
+		font-size: 25px;
 		cursor: pointer;
 		position: absolute;
 		right: 70px;
 		top: 20px;
 		z-index: 20;
+		color: rgba(0, 0, 0, 1);
+
+		&:hover {
+			color: #0166ff;
+		}
 	}
 
 	div {

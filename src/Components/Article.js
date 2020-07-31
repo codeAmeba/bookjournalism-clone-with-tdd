@@ -68,7 +68,6 @@ const ArticleContainer = styled.article`
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			font-family: serif;
 			margin-left: 10px;
 			color: rgba(0, 0, 0, 0.8);
 
@@ -119,7 +118,6 @@ const ArticleContainer = styled.article`
 				justify-content: center;
 				align-items: center;
 				font-size: 14px;
-				font-family: serif;
 
 				img {
 					width: 280px;

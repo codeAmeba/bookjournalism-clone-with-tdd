@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { BsInfoCircle, BsChevronRight } from 'react-icons/bs';
 
-const Footer = () => {
+const Footer = ({ infoOpenToggle }) => {
 	return (
 		<FooterContainer data-testid='Footer'>
-			<div>
+			<div onClick={infoOpenToggle}>
 				<BsInfoCircle className='infoIcon' data-testid='infoIcon' />
 				<span> Info</span>
 			</div>
@@ -21,7 +21,7 @@ const Footer = () => {
 };
 
 const FooterContainer = styled.footer`
-	height: 200px;
+	height: 300px;
 	background-color: #fff;
 	display: flex;
 	justify-content: space-between;

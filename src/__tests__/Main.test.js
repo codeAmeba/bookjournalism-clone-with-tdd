@@ -37,4 +37,19 @@ describe('Main', () => {
 
 		expect(screen.queryByTestId('Search')).not.toBeInTheDocument();
 	});
+
+	it('toggle event to open and close infomation', () => {
+		const { getByTestId } = render(<Main />);
+		const openInfoIcon = getByTestId('infoIcon');
+
+		fireEvent.click(openInfoIcon);
+		expect(getByTestId('Info')).toBeInTheDocument();
+		console.log('open infomation');
+
+		const closeSearchIcon = getByTestId('closeIcon');
+		fireEvent.click(closeSearchIcon);
+		console.log('close infomation');
+
+		expect(screen.queryByTestId('Info')).not.toBeInTheDocument();
+	});
 });
