@@ -22,4 +22,19 @@ describe('Main', () => {
 
 		expect(screen.queryByTestId('Menu')).not.toBeInTheDocument();
 	});
+
+	it('toggle event to open and close search', () => {
+		const { getByTestId } = render(<Main />);
+		const openSearchIcon = getByTestId('searchIcon');
+
+		fireEvent.click(openSearchIcon);
+		expect(getByTestId('Search')).toBeInTheDocument();
+		console.log('open search');
+
+		const closeSearchIcon = getByTestId('closeIcon');
+		fireEvent.click(closeSearchIcon);
+		console.log('close search');
+
+		expect(screen.queryByTestId('Search')).not.toBeInTheDocument();
+	});
 });

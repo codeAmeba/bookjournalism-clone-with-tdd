@@ -6,6 +6,6 @@ import Search from '../Components/Search';
 describe('Search', () => {
 	it('rendered search component', () => {
 		const { getByTestId } = render(<Search />);
-		expect(getByTestId('SearchContainer')).toBeInTheDocument();
+		expect(getByTestId('Search')).toBeInTheDocument();
 	});
 });

@@ -3,17 +3,17 @@ import styled from 'styled-components';
 import { AiOutlineUser, AiOutlineSearch, AiOutlineMenu } from 'react-icons/ai';
 import logo from '../Images/logo.png';
 
-const Header = ({ onToggle, scrollEvent }) => {
+const Header = ({ menuOpenToggle, searchOpenToggle, scrollEvent }) => {
 	return (
 		<HeaderContainer scrollEvent={scrollEvent === 0} data-testid='Header'>
-			<AiOutlineMenu className='menuIcon' onClick={onToggle} data-testid='menuIcon' />
+			<AiOutlineMenu className='menuIcon' onClick={menuOpenToggle} data-testid='menuIcon' />
 			<h1>
 				<a href='/'>
 					<img src={logo} alt='book journalism' />
 				</a>
 			</h1>
 			<div>
-				<AiOutlineSearch className='searchIcon' data-testid='searchIcon' />
+				<AiOutlineSearch className='searchIcon' onClick={searchOpenToggle} data-testid='searchIcon' />
 				<AiOutlineUser className='userIcon' data-testid='userIcon' />
 			</div>
 		</HeaderContainer>

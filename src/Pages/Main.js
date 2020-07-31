@@ -4,22 +4,29 @@ import Header from '../Components/Header';
 import Menu from '../Components/Menu';
 import Article from '../Components/Article';
 import Footer from '../Components/Footer';
+import Search from '../Components/Search';
 
 const Main = () => {
 	const [ menuOpen, setMenuOpen ] = useState(false);
+	const [ searchOpen, setSearchOpen ] = useState(false);
 	const [ scrollEvent, setScrollEvent ] = useState(0);
 	const [ submitEmail, setSubmitEmail ] = useState([]);
 
-	const onToggle = () => {
+	const menuOpenToggle = () => {
 		setMenuOpen(!menuOpen);
+	};
+
+	const searchOpenToggle = () => {
+		setSearchOpen(!searchOpen);
 	};
 
 	return (
 		<React.Fragment>
 			<GlobalStyle />
 			<MainContainer onWheel={() => setScrollEvent(window.scrollY)} data-testid='MainContainer'>
-				{menuOpen ? <Menu onToggle={onToggle} /> : ''}
-				<Header scrollEvent={scrollEvent} onToggle={onToggle} />
+				{menuOpen ? <Menu menuOpenToggle={menuOpenToggle} /> : ''}
+				{searchOpen ? <Search searchOpenToggle={searchOpenToggle} /> : ''}
+				<Header scrollEvent={scrollEvent} menuOpenToggle={menuOpenToggle} searchOpenToggle={searchOpenToggle} />
 				<Article />
 				<Footer />
 			</MainContainer>

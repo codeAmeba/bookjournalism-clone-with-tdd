@@ -3,10 +3,10 @@ import styled, { keyframes } from 'styled-components';
 import { GrClose } from 'react-icons/gr';
 import { menuItems } from '../config';
 
-const Menu = ({ onToggle }) => {
+const Menu = ({ menuOpenToggle }) => {
 	return (
 		<MenuContainer data-testid='Menu'>
-			<GrClose className='closeIcon' data-testid='closeIcon' onClick={onToggle} />
+			<GrClose className='closeIcon' data-testid='closeIcon' onClick={menuOpenToggle} />
 			<h4>북저널리즘</h4>
 
 			<div>
@@ -48,6 +48,7 @@ const MenuContainer = styled.section`
 	overflow: auto;
 
 	.closeIcon {
+		font-size: 20px;
 		margin-left: 30px;
 		margin-top: 20px;
 		cursor: pointer;
