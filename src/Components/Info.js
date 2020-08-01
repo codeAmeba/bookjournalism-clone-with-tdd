@@ -12,7 +12,7 @@ const Info = ({ infoOpenToggle }) => {
 				alt='codeAmeba pofile'
 			/>
 			<div className='infoBox'>
-				<h3>안녕하세요 정수영입니다.</h3>
+				<h3>안녕하세요!</h3>
 				<p>이 사이트는 TDD를 연습하기 위해 만든 북저널리즘 클론 사이트입니다.</p>
 				<div className='iconBox'>
 					<a href='https://github.com/codeAmeba' target='_blank' rel='noopener noreferrer'>
