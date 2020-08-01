@@ -1,19 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { contents } from '../config';
 
 const Article = () => {
-	const subArticleItems = contents.slice(1);
+	const [ contentList, setContentLis ] = useState([]);
+
+	useEffect(() => {
+		fetch('http://my-json-server.typicode.com/codeameba/mockdata/contents')
+			.then(res => res.json())
+			.then(res => setContentLis(res));
+	}, []);
+
+	const subArticleItems = contentList.slice(1);
 
 	return (
 		<ArticleContainer data-testid='Article'>
 			<section className='mainArticle' data-testid='mainArticle'>
 				<div>
-					<img src={contents[0].img} alt='main article img' />
+					<img src={{ ...contentList[0] }.img} alt='main article img' />
 				</div>
 				<div>
-					<h2>{contents[0].title}</h2>
-					<p>{contents[0].description}</p>
+					<h2>{{ ...contentList[0] }.title}</h2>
+					<p>{{ ...contentList[0] }.description}</p>
 				</div>
 			</section>
 			<section className='subArticle' data-testid='subArticle'>

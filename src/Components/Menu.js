@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { AiOutlineClose } from 'react-icons/ai';
 import { menuItems } from '../config';
 
 const Menu = ({ menuOpenToggle }) => {
+	// const [ menuList, setMenuList ] = useState({});
+
+	// useEffect(() => {
+	// 	fetch('http://my-json-server.typicode.com/codeameba/mockdata/menuitems')
+	// 		.then(res => res.json())
+	// 		.then(res => setMenuList({ ...res }));
+	// }, []);
+
 	return (
 		<MenuContainer data-testid='Menu'>
 			<AiOutlineClose className='closeIcon' data-testid='closeIcon' onClick={menuOpenToggle} />
