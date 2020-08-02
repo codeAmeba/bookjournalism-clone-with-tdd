@@ -5,12 +5,16 @@ const Article = () => {
 	const [ contentList, setContentLis ] = useState([]);
 
 	useEffect(() => {
+		getContents();
+	}, []);
+
+	const getContents = () => {
 		fetch('http://my-json-server.typicode.com/codeameba/mockdata/contents')
 			.then(res => res.json())
 			.then(res => setContentLis(res));
-	}, []);
+	};
 
-	const subArticleItems = contentList.slice(1);
+	const subArticleItems = [ ...contentList.slice(1) ];
 
 	return (
 		<ArticleContainer data-testid='Article'>

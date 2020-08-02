@@ -30,7 +30,7 @@ const Main = () => {
 		<React.Fragment>
 			<GlobalStyle />
 			<MainContainer onWheel={() => setScrollEvent(window.scrollY)} data-testid='MainContainer'>
-				{menuOpen ? <Menu menuOpenToggle={menuOpenToggle} /> : ''}
+				{menuOpen ? <Menu menuOpenToggle={menuOpenToggle} searchOpenToggle={searchOpenToggle} /> : ''}
 				{searchOpen ? <Search searchOpenToggle={searchOpenToggle} /> : ''}
 				<Header scrollEvent={scrollEvent} menuOpenToggle={menuOpenToggle} searchOpenToggle={searchOpenToggle} />
 				<Article />

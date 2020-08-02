@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { AiOutlineUser, AiOutlineSearch, AiOutlineMenu } from 'react-icons/ai';
 import logo from '../Images/logo.png';
 
@@ -14,7 +15,9 @@ const Header = ({ menuOpenToggle, searchOpenToggle, scrollEvent }) => {
 			</h1>
 			<div>
 				<AiOutlineSearch className='searchIcon' onClick={searchOpenToggle} data-testid='searchIcon' />
-				<AiOutlineUser className='userIcon' data-testid='userIcon' />
+				<a href='/login'>
+					<AiOutlineUser className='userIcon' data-testid='userIcon' />
+				</a>
 			</div>
 		</HeaderContainer>
 	);
@@ -65,19 +68,27 @@ const HeaderContainer = styled.header`
 			color: #0166ff;
 		}
 	}
-	.userIcon {
-		margin-right: 30px;
-		cursor: pointer;
-		transition: 0.2s ease-in-out;
+	a {
+		color: rgba(0, 0, 0, 1);
 
-		&:hover {
-			color: #0166ff;
+		.userIcon {
+			margin-right: 30px;
+			cursor: pointer;
+			transition: 0.2s ease-in-out;
+
+			&:hover {
+				color: #0166ff;
+			}
 		}
 	}
 
 	@media only screen and (max-width: 990px) {
 		height: 55px;
 		border-bottom: 1px solid rgba(0, 0, 0, 1);
+
+		.searchIcon {
+			display: none;
+		}
 	}
 `;
 

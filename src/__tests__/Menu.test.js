@@ -12,4 +12,9 @@ describe('<Menu />', () => {
 		const { getAllByRole } = render(<Menu />);
 		expect(getAllByRole('listitem')).toBeTruthy();
 	});
+
+	it('has prime button', () => {
+		const { getByText } = render(<Menu />);
+		expect(getByText('PRIME')).toBeTruthy();
+	});
 });

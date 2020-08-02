@@ -1,20 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
-import { AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineSearch } from 'react-icons/ai';
 import { menuItems } from '../config';
 
-const Menu = ({ menuOpenToggle }) => {
-	// const [ menuList, setMenuList ] = useState({});
-
-	// useEffect(() => {
-	// 	fetch('http://my-json-server.typicode.com/codeameba/mockdata/menuitems')
-	// 		.then(res => res.json())
-	// 		.then(res => setMenuList({ ...res }));
-	// }, []);
-
+const Menu = ({ menuOpenToggle, searchOpenToggle }) => {
 	return (
 		<MenuContainer data-testid='Menu'>
 			<AiOutlineClose className='closeIcon' data-testid='closeIcon' onClick={menuOpenToggle} />
+			<AiOutlineSearch className='searchIcon' onClick={searchOpenToggle} data-testid='searchIcon' />
+
 			<h4>북저널리즘</h4>
 
 			<div>
@@ -29,6 +23,9 @@ const Menu = ({ menuOpenToggle }) => {
 
 			<div>
 				<ul>{menuItems.more.map((item, idx) => <li key={item + idx}>{item}</li>)}</ul>
+			</div>
+			<div>
+				<button>PRIME</button>
 			</div>
 		</MenuContainer>
 	);
@@ -55,7 +52,8 @@ const MenuContainer = styled.section`
 	animation: ${MenuSlideAnimation} .3s ease-in-out;
 	overflow: auto;
 
-	.closeIcon {
+	.closeIcon,
+	.searchIcon {
 		font-size: 25px;
 		margin-left: 30px;
 		margin-top: 20px;
@@ -65,6 +63,13 @@ const MenuContainer = styled.section`
 		&:hover {
 			color: #0166ff;
 		}
+	}
+
+	.searchIcon {
+		display: none;
+		position: absolute;
+		right: 30px;
+		top: 0;
 	}
 
 	h4 {
@@ -100,6 +105,37 @@ const MenuContainer = styled.section`
 					color: #0166ff;
 				}
 			}
+		}
+	}
+
+	div:last-child {
+		height: 20vh;
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		button {
+			width: 250px;
+			height: 30px;
+			color: #0166ff;
+			background-color: #fff;
+			border: 1px solid #0166ff;
+			transition: 0.2s ease-in-out;
+			cursor: pointer;
+			font-family: serif;
+			letter-spacing: 2px;
+			font-weight: 800;
+
+			&:hover {
+				color: #fff;
+				background-color: #0166ff;
+			}
+		}
+	}
+	@media only screen and (max-width: 990px) {
+		.searchIcon {
+			display: block;
 		}
 	}
 `;
