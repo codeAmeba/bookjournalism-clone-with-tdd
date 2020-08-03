@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ae901d233e341cbd689552a4473d60b0",
+    "revision": "5948face346ba1a9bba1f273c5123c58",
     "url": "/bookjournalism-clone-with-tdd/index.html"
   },
   {
-    "revision": "fefb99855c01a8206db7",
-    "url": "/bookjournalism-clone-with-tdd/static/js/2.e091318a.chunk.js"
+    "revision": "0778f1a9570632c6a2c3",
+    "url": "/bookjournalism-clone-with-tdd/static/js/2.bc65afb3.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/bookjournalism-clone-with-tdd/static/js/2.e091318a.chunk.js.LICENSE.txt"
+    "url": "/bookjournalism-clone-with-tdd/static/js/2.bc65afb3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9bd7708179be4ff0f718",
-    "url": "/bookjournalism-clone-with-tdd/static/js/main.bf230dc9.chunk.js"
+    "revision": "e155e1ca5d2762894927",
+    "url": "/bookjournalism-clone-with-tdd/static/js/main.cbfa067d.chunk.js"
   },
   {
     "revision": "27956bed5152fa65fb95",
