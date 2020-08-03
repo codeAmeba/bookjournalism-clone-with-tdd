@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/bookjournalism-clone-with-tdd/precache-manifest.78ffdc9b09b1b36ec2a0789712f3f9c7.js"
+  "/bookjournalism-clone-with-tdd/precache-manifest.94fdcb7c4402af2dee1ba8455e7217c0.js"
 );
 
 self.addEventListener('message', (event) => {

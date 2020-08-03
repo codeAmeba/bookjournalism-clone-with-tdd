@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/bookjournalism-clone-with-tdd/static/js/main.13183bd9.chunk.js",
-    "main.js.map": "/bookjournalism-clone-with-tdd/static/js/main.13183bd9.chunk.js.map",
+    "main.js": "/bookjournalism-clone-with-tdd/static/js/main.bf230dc9.chunk.js",
+    "main.js.map": "/bookjournalism-clone-with-tdd/static/js/main.bf230dc9.chunk.js.map",
     "runtime-main.js": "/bookjournalism-clone-with-tdd/static/js/runtime-main.69ba1af2.js",
     "runtime-main.js.map": "/bookjournalism-clone-with-tdd/static/js/runtime-main.69ba1af2.js.map",
     "static/js/2.e091318a.chunk.js": "/bookjournalism-clone-with-tdd/static/js/2.e091318a.chunk.js",
     "static/js/2.e091318a.chunk.js.map": "/bookjournalism-clone-with-tdd/static/js/2.e091318a.chunk.js.map",
     "index.html": "/bookjournalism-clone-with-tdd/index.html",
-    "precache-manifest.78ffdc9b09b1b36ec2a0789712f3f9c7.js": "/bookjournalism-clone-with-tdd/precache-manifest.78ffdc9b09b1b36ec2a0789712f3f9c7.js",
+    "precache-manifest.94fdcb7c4402af2dee1ba8455e7217c0.js": "/bookjournalism-clone-with-tdd/precache-manifest.94fdcb7c4402af2dee1ba8455e7217c0.js",
     "service-worker.js": "/bookjournalism-clone-with-tdd/service-worker.js",
     "static/js/2.e091318a.chunk.js.LICENSE.txt": "/bookjournalism-clone-with-tdd/static/js/2.e091318a.chunk.js.LICENSE.txt",
     "static/media/logo.png": "/bookjournalism-clone-with-tdd/static/media/logo.e031ab7b.png"
@@ -15,6 +15,6 @@
   "entrypoints": [
     "static/js/runtime-main.69ba1af2.js",
     "static/js/2.e091318a.chunk.js",
-    "static/js/main.13183bd9.chunk.js"
+    "static/js/main.bf230dc9.chunk.js"
   ]
 }
