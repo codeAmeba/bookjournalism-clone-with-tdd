@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { AiOutlineUser, AiOutlineSearch, AiOutlineMenu } from 'react-icons/ai';
 import logo from '../Images/logo.png';
 
