@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { contents } from '../config';
 
 const Article = () => {
-	const [ contentList, setContentLis ] = useState([]);
+	const [ contentList, setContentList ] = useState([]);
 
 	useEffect(() => {
-		getContents();
+		// getContents();
+		setContentList(contents);
 	}, []);
 
-	const getContents = () => {
-		fetch('http://my-json-server.typicode.com/codeameba/mockdata/contents')
-			.then(res => res.json())
-			.then(res => setContentLis(res));
-	};
+	// const getContents = () => {
+	// 	fetch('http://my-json-server.typicode.com/codeameba/mockdata/contents')
+	// 		.then(res => res.json())
+	// 		.then(res => setContentList(res));
+	// };
 
 	const subArticleItems = [ ...contentList.slice(1) ];
 
