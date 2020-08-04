@@ -8,9 +8,7 @@ const Header = ({ menuOpenToggle, searchOpenToggle, scrollEvent }) => {
 		<HeaderContainer scrollEvent={scrollEvent === 0} data-testid='Header'>
 			<AiOutlineMenu className='menuIcon' onClick={menuOpenToggle} data-testid='menuIcon' />
 			<h1>
-				<a href='/'>
-					<img src={logo} alt='book journalism' />
-				</a>
+				<a href='/'>BOOK JOURNALISM</a>
 			</h1>
 			<div>
 				<AiOutlineSearch className='searchIcon' onClick={searchOpenToggle} data-testid='searchIcon' />
@@ -37,8 +35,10 @@ const HeaderContainer = styled.header`
 	border-bottom: ${props => (props.scrollEvent ? 'none' : '1px solid rgba(0, 0, 0, 1)')};
 
 	h1 {
+		display: flex;
 		a {
-			display: flex;
+			font-size: 20px;
+			text-decoration: none;
 		}
 
 		img {
